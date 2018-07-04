@@ -1,27 +1,54 @@
 # CarouselApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+In this Angular repo there are two projects:
+* a library project (carousel)
+This is the library of components and services that we want to provide. This is the code that we could publish to npm for example.
+* an application project (carousel-app)
+This will be a test harness for our library. Sometimes this application is used as documentation and example usage of the library.
 
-## Development server
+## Development
+create application project: `ng new carousel-app`
+cd carousel-app
+create lib project with prefix: `ng generate library carousel --prefix=tr`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In `projects/` we have the new lib created.
+To build our new lib: `ng build --prod carousel`
 
-## Code scaffolding
+To use it in application project, import it in module:
+```
+import { CarouselModule } from 'carousel';
+```
+create task npm in root package.json:
+```
+"build_lib": "ng build --prod carousel",
+"npm_pack": "cd dist/carousel && npm pack",
+"package": "npm run build_lib && npm run npm_pack"
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+last command create dist folder with lib and pack in inside .tgz
 
-## Build
+Publish on npm: [npm Tutorial](https://docs.npmjs.com/getting-started/publishing-npm-packages).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+run on a project command: `npm install ../path-to-tgz-lib/example-lib-0.0.1.tgz`
+In application project, import lib in module:
+```
+import { CarouselModule } from 'carousel';
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+import: {
+  CarouselModule
+}
+```
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+Copy 'src/assets' folder inside '/dist/carousel/lib'
+
+
