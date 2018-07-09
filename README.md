@@ -7,6 +7,8 @@ This is the library of components and services that we want to provide. This is 
 * an application project (carousel-app)
 This will be a test harness for our library. Sometimes this application is used as documentation and example usage of the library.
 
+[url=https://imgur.com/ln7Nxye][img]http://i.imgur.com/ln7Nxye.gif[/img][/url]
+
 ## Development
 create application project: `ng new carousel-app`
 cd carousel-app
