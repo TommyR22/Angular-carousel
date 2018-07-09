@@ -48,10 +48,15 @@ import: {
 }
 ```
 
-
-
-
-
-Copy 'src/assets' folder inside '/dist/carousel/lib'
-
-
+## Customize
+### component.carousel.html
+This could have at least one of these divs:
+-hideLeft
+-prevLeftSecond
+-prev
+-selected
+-next
+-nextRightSecond
+-hideRight
+### component.carousel.scss
+update this for style lib
