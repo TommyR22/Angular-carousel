@@ -16,9 +16,9 @@ create application project: `ng new carousel-app`
 cd carousel-app
 create lib project with prefix: `ng generate library carousel --prefix=tr`
 
-In `projects/` we have the new lib created.
-To build our new lib: `ng build --prod carousel`
-run example: `ng serve -o`
+In `projects/` we have the new lib created.  
+To build our new lib: `ng build --prod carousel`  
+run example: `ng serve -o`  
 
 To use it in application project, import it in module:
 ```
@@ -31,7 +31,7 @@ create task npm in root package.json:
 "package": "npm run build_lib && npm run npm_pack"
 ```
 
-last command create dist folder with lib and pack in inside .tgz
+last command create dist folder with lib and pack in inside .tgz  
 
 Publish on npm: [npm Tutorial](https://docs.npmjs.com/getting-started/publishing-npm-packages).
 
@@ -50,13 +50,13 @@ import: {
 
 ## Customize
 ### component.carousel.html
-This could have at least one of these divs:
--hideLeft
--prevLeftSecond
--prev
--selected
--next
--nextRightSecond
--hideRight
+This could have at least one of these divs:  
+-hideLeft  
+-prevLeftSecond  
+-prev  
+-selected  
+-next  
+-nextRightSecond  
+-hideRight  
 ### component.carousel.scss
 update this for style lib
