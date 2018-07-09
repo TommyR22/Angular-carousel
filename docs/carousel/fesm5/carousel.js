@@ -1,4 +1,4 @@
-import { Injectable, NgModule, Component, ElementRef, EventEmitter, Output, Renderer2, defineInjectable } from '@angular/core';
+import { Injectable, Component, ElementRef, EventEmitter, Output, Renderer2, NgModule, defineInjectable } from '@angular/core';
 
 /**
  * @fileoverview added by tsickle
