@@ -43,9 +43,13 @@ import: {
 }
 ```
 
-## Further help
+## Further info
+deploy example to GithubPages after push the repository:
+`npm install -g gh-pages`
+`ng build --prod carousel-app --base-href /PROJECT_NAME/`
+`gh-pages -d dist`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
 
 
 
