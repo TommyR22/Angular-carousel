@@ -14,6 +14,7 @@ create lib project with prefix: `ng generate library carousel --prefix=tr`
 
 In `projects/` we have the new lib created.
 To build our new lib: `ng build --prod carousel`
+run example: `ng serve -o`
 
 To use it in application project, import it in module:
 ```
@@ -42,12 +43,6 @@ import: {
   CarouselModule
 }
 ```
-
-## Further info
-deploy example to GithubPages after push the repository:
-`npm install -g gh-pages`
-`ng build --prod carousel-app --base-href /PROJECT_NAME/`
-`gh-pages -d dist`
 
 
 
